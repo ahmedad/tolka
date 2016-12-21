@@ -15,6 +15,10 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'paperclip', '~> 5.1'
 gem 'devise', '~> 4.2'
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'social-share-button', '~> 0.8.8'
+gem 'rails_admin', '~> 1.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
 
 group :development, :test do

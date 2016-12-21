@@ -1,0 +1,27 @@
+!!!
+%html
+%head
+  %title Title
+  = csrf_meta_tags
+  = stylesheet_link_tag    'application', media: 'all'
+  = javascript_include_tag 'application'
+  %link{:rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"}
+  %link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"}
+
+%body
+  %header
+    .wrapper.clearfix
+      #logo=link_to "Platform name", root_path
+      %nav
+        - if user_signed_in?
+          = link_to "Sign Out", destroy_user_session_path, method: :delete
+          = link_to "Add new matter", new_post_path(@post), class: 'button'
+        - else
+          =link_to "Sign In", new_user_session_path, class: 'button'
+          
+  %p.notice= notice
+  %p.alert= alert
+  .wrapper
+    = yield
+
+
