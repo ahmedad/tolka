@@ -58,4 +58,6 @@
 		.comment
 			%p.username= comment.user.name
 			%p.content= comment.content
+			- if current_user.admin?
+				= link_to 'Delete reply', [comment.post, comment], method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger'
 	= render "comments/form"

@@ -1,6 +1,7 @@
 /*
  *= require_self
  *= require social-share-button
+ *= require 'masonry/transitions'
  */
 
  body {
@@ -68,8 +69,8 @@ header {
 	}
 }
 
-@import 'home.css.scss';
-@import 'posts.css.scss';
+@import 'home.scss';
+@import 'posts.scss';
 @import "social-share-button";
 @import "bootstrap-sprockets";
 @import "bootstrap";
