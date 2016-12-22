@@ -1,7 +1,7 @@
 !!!
 %html
 %head
-  %title Title
+  %title DanWadaag
   = csrf_meta_tags
   = stylesheet_link_tag    'application', media: 'all'
   = javascript_include_tag 'application'
@@ -11,7 +11,7 @@
 %body
   %header
     .wrapper.clearfix
-      #logo=link_to "Platform name", root_path
+      #logo=link_to "DanWadaag", root_path
       %nav
         - if user_signed_in?
           = link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'button'
